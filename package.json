@@ -54,10 +54,16 @@
   "module": "./src/base64.js",
   "types": "types/base64.single.d.ts",
   "exports": {
-    ".": {
-      "import": "./src/base64.js",
-      "require": "./dist/base64.cjs",
-      "browser": "./dist/base64.min.js"
+  ".": {
+    "browser": "./dist/base64.min.js",
+      "import": {
+        "types": "./types/base64.single.d.ts",
+        "default":  "./src/base64.js"
+      },
+      "require": {
+        "types": "./types/base64.single.d.ts",
+        "default": "./dist/base64.cjs"
+      }
     }
   },
   "devDependencies": {
